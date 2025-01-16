@@ -1,0 +1,401 @@
+body {
+  margin: 0 auto;
+  height: 100vh;
+}
+body #top {
+  display: grid;
+  background-color: gray;
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+  height: 96px;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+body #top #timer {
+  width: 70px;
+}
+body #top #f2 {
+  justify-self: end;
+}
+body #top #f2 #fullScr {
+  width: 100%;
+  height: 50px;
+  background-color: hsl(0, 0%, 48%);
+  border: none;
+  color: rgba(255, 255, 255, 0.551);
+  letter-spacing: 0.3em;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+body #top #f2 #fullScr:hover {
+  background-color: hsl(0, 2%, 75%);
+  color: rgba(0, 0, 0, 0.671);
+}
+body #top #f1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+body #top #f1 #timeCount {
+  justify-self: center;
+}
+body #top #f1 #countdown {
+  display: none;
+}
+body #top #f1 #dublicate {
+  font-size: 20px;
+  height: 35px;
+  width: 100px;
+  text-align: center;
+}
+body #top #f1 #TimeOnOff {
+  display: grid;
+  justify-self: end;
+  grid-template-rows: 1fr 1fr;
+  height: 80px;
+  width: 40px;
+  justify-items: center;
+}
+body #top #f1 #TimeOnOff #playTime {
+  border-radius: 20%;
+  background-image: url(../img/Play_B.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(232, 232, 232);
+  margin: 0;
+  height: 30px;
+  border: none;
+  align-self: center;
+  width: 30px;
+}
+body #top #f1 #TimeOnOff #stopTime {
+  border-radius: 20%;
+  background-image: url(../img/Pause_B.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(232, 232, 232);
+  margin: 0;
+  height: 30px;
+  width: 30px;
+  border: none;
+  align-self: center;
+}
+body #top #f1 #f2_2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-self: end;
+}
+body #top #f1 #f2_2 > div {
+  justify-self: center;
+}
+body #top #f1 #f2_2 > div #start {
+  align-self: last baseline;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  height: 7px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 200px;
+  background-color: rgb(206, 205, 205);
+}
+body #top #f1 #f2_2 > div #start::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+body #top #f1 #f2_2 #line {
+  display: grid;
+  width: 200px;
+  height: 5px;
+  justify-self: center;
+}
+body #top #f1 #f2_2 #line #numb {
+  translate: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+body #top #f1 #f2_2 #line #numb > div {
+  translate: none;
+}
+body #top #f1 #f2_2 #line #numb :nth-of-type(1) {
+  position: relative;
+  right: 5px;
+  bottom: 10px;
+}
+body #top #f1 #f2_2 #line #numb :nth-of-type(2) {
+  position: relative;
+  right: 5px;
+  bottom: 6px;
+}
+body #top #f1 #f2_2 #line #numb :nth-of-type(3) {
+  position: relative;
+  right: 5px;
+  bottom: 2px;
+}
+body #top #f1 #f2_2 #line #numb :nth-of-type(4) {
+  position: relative;
+  left: 5px;
+  bottom: 6px;
+}
+body #top #f1 #f2_2 #line #numb :nth-of-type(5) {
+  position: relative;
+  left: 15px;
+  bottom: 10px;
+}
+body #top #f1 #f2_2 #line #shpic {
+  pointer-events: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+body #top #f1 #f2_2 #line #shpic :nth-last-of-type(1) {
+  justify-self: end;
+  position: relative;
+  right: 4px;
+  bottom: 9px;
+  translate: "no";
+}
+body #top #f1 #f2_2 #line #shpic :nth-last-of-type(2) {
+  justify-self: center;
+  position: relative;
+  left: 5px;
+  bottom: 6px;
+  translate: "no";
+}
+body #top #f1 #f2_2 #line #shpic :nth-last-of-type(3) {
+  justify-self: center;
+  position: relative;
+  right: 5px;
+  bottom: 2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body #top #f1 #f2_2 #line #shpic :nth-last-of-type(4) {
+  position: relative;
+  left: 4px;
+  bottom: 6px;
+}
+body #top #f1 #f2_2 #line #shpic :nth-last-of-type(5) {
+  position: relative;
+  left: 3px;
+  bottom: 9px;
+}
+body #top #f3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+}
+body #top #f3 #f3_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+}
+body #top #f3 #f3_1 #f3_1_1 {
+  justify-self: end;
+}
+body #top #f3 #f3_1 #f3_1_1 #time {
+  height: 25px;
+  width: 80px;
+}
+body #top #f3 #f3_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+}
+body #top #f3 #f3_2 #f3_2_2 {
+  justify-self: start;
+}
+body #top #f3 #f3_2 #f3_2_2 #sise {
+  height: 25px;
+  width: 80px;
+}
+body #top #f3 .form {
+  height: 35px;
+  width: 100px;
+  text-align: center;
+  font-size: 18px;
+}
+body #top #f4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+}
+body #top #f4 #f4_2 {
+  justify-self: start;
+}
+body #top #f4 #f4_2 form {
+  width: 100%;
+}
+body #top #f4 #f4_2 form input {
+  margin: 5px auto;
+}
+body #top #f4 .input {
+  color: rgb(236, 233, 233);
+  margin: 0 auto;
+}
+body #top #f4 .input:hover {
+  font-size: 17px;
+  cursor: pointer;
+  -webkit-text-decoration: underline solid rgb(255, 255, 255);
+          text-decoration: underline solid rgb(255, 255, 255);
+  transition: 0.7s;
+  color: white;
+  box-sizing: content-box;
+}
+body #top #f4 #f4_1 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  align-items: center;
+  justify-items: baseline;
+  padding-left: 20px;
+}
+body #top #f4 #f4_1 div > input {
+  margin: 0;
+}
+body #top #f4 #help {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 7px;
+}
+body #top #f4 #help #language span {
+  font-size: 24px;
+}
+body #top #f4 #help #language #he {
+  font-size: 16px;
+  color: rgb(0, 234, 0);
+  border: none;
+  background-color: transparent;
+}
+body #top #f4 #help #language #he:hover {
+  cursor: pointer;
+  -webkit-text-decoration: underline solid rgb(0, 234, 0);
+          text-decoration: underline solid rgb(0, 234, 0);
+}
+body #top #f4 #help #language #ru {
+  font-size: 16px;
+  color: rgb(4, 0, 218);
+  border: none;
+  background-color: transparent;
+}
+body #top #f4 #help #language #ru:hover {
+  cursor: pointer;
+  -webkit-text-decoration: underline solid rgb(4, 0, 218);
+          text-decoration: underline solid rgb(4, 0, 218);
+}
+body #top #f4 #help #language #en {
+  font-size: 24px;
+  color: rgb(218, 3, 3);
+  border: none;
+  background-color: transparent;
+}
+body #top #f4 #help #language #en:hover {
+  cursor: pointer;
+  -webkit-text-decoration: underline solid rgb(218, 3, 3);
+          text-decoration: underline solid rgb(218, 3, 3);
+}
+body #top #f4 #help #language #lang {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 20px;
+  align-self: center;
+  border-radius: 40%;
+  height: 7px;
+  background: rgb(206, 205, 205);
+  transition: 5ms;
+}
+body #top #f4 #help #language #lang::-webkit-slider-thumb {
+  -webkit-transition: 10ms;
+  transition: 10ms;
+  -webkit-appearance: none;
+  height: 12px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+body #top #f4 #help #btnHelp {
+  display: grid;
+  padding-right: 20px;
+}
+body #top #f4 #help #openModal {
+  border: none;
+  background: none;
+  font-family: math;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(251, 251, 251);
+  justify-self: end;
+  align-self: end;
+}
+body #top #f4 #help #openModal:hover {
+  font-size: 24px;
+  top: 5px;
+  right: 10px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+  position: relative;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.297);
+  letter-spacing: 3px;
+}
+body #top #f4 #help .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body #top #f4 #help .modal-content {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  padding: 50px 70px;
+  pointer-events: none;
+}
+body #top #f4 #help .close {
+  /* some rules */
+}
+body #window {
+  width: 100%;
+  height: 87vh;
+  margin: auto;
+  position: absolute;
+}
+body #window #clean {
+  height: 100%;
+  width: 100%;
+  background: none;
+  color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+body #window > div {
+  position: absolute;
+  text-align: center;
+}
+body #window > div p {
+  font-size: 60px;
+  margin: 0;
+  color: black;
+  font-family: Times;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
