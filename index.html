@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Супер Алфавит</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="js/scriptEng.js" defer></script> -->
+    <script src="js/script.js" defer></script>
+
+
+</head>
+
+<body>
+    <div id="top">
+
+        <!-- Timer  -->
+
+        <div id="f1"> <!--f1-->
+
+            <div id="TimeOnOff">
+                <button id="playTime" class="play"></button>
+                <button id="stopTime" class="play"></button>    
+            </div>
+
+            <!-- <span class="slider round"></span> -->
+
+
+            <div id="f2_2"> <!--timer2-->
+
+                <div>
+                    <input type="range" id="start" min="60" max="1200" step="60" value="60">
+                </div>
+
+                <span id="line">
+                    <div id="shpic">
+                        <div> | </div>
+                        <div> | </div>
+                        <div> | </div>
+                        <div> | </div>
+                        <div> | </div>
+                    </div>
+                    <div id="numb">
+                        <div>1min.</div>
+                        <div>5min.</div>
+                        <div>10min.</div>
+                        <div>15min.</div>
+                        <div>20min.</div>
+                    </div>
+                </span>
+            </div>
+            <div id="timeCount">
+                <p id="countdown"></p>
+                <input class="form" type="text" id="dublicate" value="01 : 00">
+            </div>
+        </div>
+        <!-- Start -->
+        <div id="f2"> <!--screen-->
+
+            <label for="fullScr"></label>
+            <input id="fullScr" type="submit" class="scr" value="&#8593;Up | Down&#8595;&#8595;"
+                >
+            <!-- <input type="submit" onclick="getWidth()"> -->
+        </div>
+
+        <div id="f3">
+            <div id="f3_1">
+                <div id="f3_1_1">
+                    <label for="time"></label>
+                    <input onclick="setTime(); newLetters (); setTimer();resetSuperExtr(); resetExtra()"
+                        type="submit" id="time" value="Speed">
+                </div>
+                <div id="f3_1_2"> <!--f2-->
+                    <input type="number" name="number" class="form"  id="speed" min="100" max="5000" value="1600" step="100">
+                </div>
+            </div>
+            <!-- font sise control  -->
+            <div id="f3_2"> <!--shrift-->
+                <div id="f3_2_1">
+                    <input type="number" name="letters" class="form" id="fill" min="10"  value="60" step="10">
+                </div>
+                <div id="f3_2_2">
+                    <label for="sise"></label>
+                    <input onclick="setSise()" type="submit" id="sise" value="Sise">
+                </div>
+            </div>
+            <!-- Extro -->
+
+        </div>
+        <div id="f4"> <!--f3-->
+            <div id="f4_1">
+                <div >
+                    <input type="radio" id="super" onclick="if(this.checked){superExtra();resetExtra()
+                    }else{setTime();resetColor();resetExtColor();resetExtra()};" name="fav_language" value="super">
+                    <label class="input"  for="super">Super Extra</label>
+                </div>
+                <div>
+                    <input onclick="startApp(); setTimer();resetSuperExtr();" type="radio" id="On">
+                    <label class="input"  for="On">Extra</label>
+                </div>
+
+            </div>
+            <div id="f4_2">
+                <form>
+                    <input type="checkbox" onclick=" " id="color" name="ChangeColor" value="just">
+                    <label class="input"  for="color">Color</label><br>
+                    <input type="checkbox" onclick="" id="ColorExt" name="ChangeColor" value="Ext">
+                    <label class="input" for="ColorExt">Extra Color</label><br>
+                    <input type="checkbox" onclick=" " id="theme" name="ChangeColor" value="just">
+                    <label class="input"  for="theme">Dark Theme</label>
+                </form>
+            </div>
+            <div  id="help">
+                <div id="language">
+                    <button id="ru">Ru</button>
+                    <span>/</span>
+                    <button id="en">En</button>
+                    <span>/</span>
+                    <button id="he">He</button>
+                </div>
+                <div id="btnHelp">
+                    <button id="openModal">Help !</button>
+
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                          <button class="close">close</button>
+                          <h2>Приложение "Алфавит с руками"</h2> 
+
+                           <p> Цель этого приложения развивать скорость и гибкость мышления!</p>
+                            <p>
+                                Всего 5 - 10 минут в день, в разы увеличат мозговую активность,
+                                а КПД вашего мозга повысится на 15% - 30%.
+                            </p>
+                            <p>Как это работает:</p>
+                            <p>
+                                Перед вами на пустом экране, в хаотичном порядке
+                                появляются две буквы.Верхняя буква, это любая буква алфавита от "А" до "Я".
+                                 Нижняя буква одна из трех букв:
+                            </p>
+                             <p> 
+                                 "Л" - левая рука. <br>
+                                 "П" - правая рука. <br>
+                                 "О" - обе руки.
+                             </p>
+                             <p>
+                                 Ваша задача назвать верхнюю букву (любая буква алфавита) вслух!
+                                 И одновременно поднять вверх руку. (Левую, правую или обе руки.)
+                                 Ту, которую показывает нижняя буква.
+                             </p>
+                            
+                            <p>
+                                В верней части экрана, ты найдешь меню настроек.
+                                Где можно увеличить или уменьшить скорость появления букв,
+                                а так же их величину.
+                                
+                                В левой части меню находится таймер. В правой части есть разные способы
+                                изменения сложности, где ты можешь менять цвета букв, хаотичный размер
+                                шрифта, а так же поменять фон с белого на черный. И возможность выбора
+                                языка: Рус/Анг/Ивр.
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <audio id="final" style="display: none;" controls src="audio/obratnyiy-otschet-jenschina.mp3"></audio>
+    
+
+
+    <!-- буквы -->
+
+    <div id="window">
+        <input id="clean" type="submit" class="butt" value="скрыть панель">
+        <div id="block">
+            <p id="alfavit"></p>
+            <p id="hand"></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
